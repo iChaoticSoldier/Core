@@ -9,3 +9,8 @@ A PocketMine-MP plugin for my Server. | Accept pull requests!
    <th>Steps:</th>
    <th>What To Do:</th>
   </tr>
+  <tr>
+    <td>
+      Step 1:
+      </td>
+
