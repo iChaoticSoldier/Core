@@ -19,6 +19,7 @@ A PocketMine-MP plugin for my Server. | Accept pull requests!
     <td>Drag the<code>Core.phar</code>file to <code>plugins/</code></td>
   </tr>
   <tr>
+  <td>Step 3:</td>
     <td>(Re)start your server</td>
   </tr>
 </table>
