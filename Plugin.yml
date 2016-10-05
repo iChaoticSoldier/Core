@@ -1,0 +1,23 @@
+name: Majorcraft
+main: majorplayz\Main
+version: 1.0.0
+api: 2.0.0
+
+commands:
+ core:
+  usage: /core
+  description: Info about Majorcraft's Core
+  permission: core.command.info
+ Core Help:
+  usage: /commands
+  description: Core Commands
+  permission: core.command.help
+permissions:
+ core.command.info:
+  default: op
+  descrition: Info about Majorcraft's Core
+  permission: core.command.info
+ core.command.help:
+  default: op
+  description: Core Commands
+  permission: core.command.help
