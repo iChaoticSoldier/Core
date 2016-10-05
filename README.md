@@ -1,7 +1,7 @@
 # MajorcraftCore
 A PocketMine-MP plugin for my Server. | Accept pull requests!
 
-###Files Uploading Soon
+###Read License for use in your code
 
 ##Install Instructions:
 <table>
