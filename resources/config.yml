@@ -1,0 +1,10 @@
+---
+enable-core: true
+enable-antihack: true
+
+#Enable ranks?
+enable-ranks: true
+
+#Enable /spawn?
+enable-spawn: true
+...
