@@ -1,10 +1,8 @@
----
+#Master On/Off Switch :D
 enable-core: true
+
+#Enable AntiHack
 enable-antihack: true
 
 #Enable ranks?
 enable-ranks: true
-
-#Enable /spawn?
-enable-spawn: true
-...
