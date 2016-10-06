@@ -77,4 +77,33 @@ class Main extends PluginBase implements Listener
         }
         return false;
     }
+   
+    public function setNick(Player $player, string $nick): bool{
+        if(!$this->colorMessage($nick, $player)){
+            return false;
+        }
+        $this->getServer()->getPluginManager()->callEvent($ev = new PlayerNickChangeEvent($this, $player, $this->colorMessage($nick)));
+        if($ev->isCancelled()){
+            return false;
+        }
+        if(strtolower($ev->getNewNick()) === strtolower($player->getName()) || $ev->getNewNick() === "off" || trim($ev->getNewNick()) === "" || $ev->getNewNick() === null){
+            $ev->setNick(null);
+        }
+        $this->getSession($player)->setNick($ev->getNewNick());
+        return true;
+    }
+    /**
+     * Restore the original player name for chat and on his NameTag
+     *
+     * @param Player $player
+     * @return bool
+     */
+    public function removeNick(Player $player): bool{
+        $this->getServer()->getPluginManager()->callEvent($event = new PlayerNickChangeEvent($this, $player, $player->getName()));
+        if($event->isCancelled()){
+            return false;
+        }
+        $this->getSession($player)->setNick(null);
+        return true;
+    }
 }
