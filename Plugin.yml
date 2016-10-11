@@ -25,6 +25,16 @@ commands:
   permission: secret.command
   description: Shhhh!
 permissions:
+ essentials.nick:
+  default: false
+  description: "Change your or others name"
+  children:
+  essentials.nick.use:
+   default: op
+   description: "Change self nickname"
+   essentials.nick.other:
+   default: op
+   description: "Change others name"
  secret.command:
   description: Shhhh!
   permission: secret.command
