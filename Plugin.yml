@@ -8,16 +8,40 @@ commands:
   usage: /core
   description: Info about Majorcraft's Core
   permission: core.command.info
- Core Help:
+ commands:
   usage: /commands
   description: Core Commands
   permission: core.command.help
+ fhelp:
+  usage: /fhelp
+  description: Factions Commands
+  permission: core.factions.command.help
+ mhelp:
+  usage: /mhelp
+  description: Mail Commands
+  permission: core.mail.command.help
+ secretcommand:
+  usage: §b/§aNope! This command is secret!
+  permission: secret.command
+  description: Shhhh!
 permissions:
+ secret.command:
+  description: Shhhh!
+  permission: secret.command
+  default: true
  core.command.info:
   default: op
   descrition: Info about Majorcraft's Core
   permission: core.command.info
  core.command.help:
-  default: op
+  default: true
   description: Core Commands
   permission: core.command.help
+ core.factions.command.help:
+  default: true
+  description: Factions Commands
+  permission: core.factions.command.help
+ core.mail.command.help:
+  default: true
+  description: Mail Commands
+  permission: core.mail.command.help
