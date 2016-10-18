@@ -99,7 +99,7 @@ class Main extends PluginBase implements Listener
                 	
                 }
                 case "nick": {
-                        if($sender->hasPermission("essentialspechat.commands.nick")){                  
+                        if($sender->hasPermission("core.command.nick.use")){                  
 			if(empty($args[0])) {
 				$sender->sendMessage (TextFormat::RED."Please enter a valid player name...");
 				return true;
