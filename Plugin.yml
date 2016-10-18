@@ -24,17 +24,11 @@ commands:
   usage: §b/§aNope! This command is secret!
   permission: secret.command
   description: Shhhh!
+ nick:
+  permission: core.command.nick
+  usage: /nick <player> <nickname> <mode>
+  description: §aSet a players §bnickname§a! Ported from EssentialsPEChat
 permissions:
- essentials.nick:
-  default: false
-  description: "Change your or others name"
-  children:
-  essentials.nick.use:
-   default: op
-   description: "Change self nickname"
-   essentials.nick.other:
-   default: op
-   description: "Change others name"
  secret.command:
   description: Shhhh!
   permission: secret.command
@@ -55,3 +49,7 @@ permissions:
   default: true
   description: Mail Commands
   permission: core.mail.command.help
+ core.command.nick:
+  default: true
+  description: §aSet a players §bnickname§a! Ported from EssentialsPEChat
+  permission: core.command.nick
