@@ -98,6 +98,30 @@ class Main extends PluginBase implements Listener
             
                 	
                 }
+                case "nick": {
+                        if($sender->hasPermission("essentialspechat.commands.nick")){                  
+			if(empty($args[0])) {
+				$sender->sendMessage (TextFormat::RED."Please enter a valid player name...");
+				return true;
+			}
+			if(empty($args[1])) {
+				$sender->sendMessage (TextFormat::RED."Please enter a valid nick.");
+				return true;
+			}
+			$playerName = $args [0];
+			$p = $sender->getServer ()->getPlayerExact ( $playerName );
+			if ($p == null) {
+				$sender->sendMessage ("§6" .TextFormat::RED . "[EssentialsPEChat] player " . $playerName . " is not online!" );
+				return true;
+			}
+			$nick = $args [1];
+			$this->plugin->nick_config ( $p->getName () . ".nick", $nick );
+			
+			$this->plugin->formatterPlayerDisplayName ( $p );
+			$sender->sendMessage (TextFormat::GREEN. $p->getName () . " set to " . $args [1] );
+			break;
+		}
+		}
                 }
                 
             }
