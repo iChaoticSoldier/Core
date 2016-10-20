@@ -17,6 +17,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
 use pocketmine\math\Vector3;
+use chatfilter;
 
 class Main extends PluginBase implements Listener
 {
