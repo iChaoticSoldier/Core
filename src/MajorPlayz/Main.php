@@ -1,5 +1,8 @@
 <?php
-
+/*
+Code for grabbing file contents
+file_get_contents("http://x.com/file.txt");
+*/
 namespace majorplayz;
 
 /* Majorcraft Core Plugin
