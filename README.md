@@ -11,7 +11,7 @@ A PocketMine-MP plugin for my Server. | Accept pull requests!
   </tr>
   <tr>
     <td>Step 1:</td>
-    <td>Download a phar from <a href="http://github.com/MajorPlayz/MajorcraftCore/releases">here</a>
+    <td>Download a phar from <a href="http://github.com/MajorPlayz/MajorcraftCore/releases"><b>here</b></a>
     </td>
   </tr>
   <tr>
