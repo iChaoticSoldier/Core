@@ -4,7 +4,6 @@ Code for grabbing file contents
 file_get_contents("http://x.com/file.txt");
 */
 
-//test
 namespace majorplayz;
 
 /* Majorcraft Core Plugin
