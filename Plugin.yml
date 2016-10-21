@@ -26,13 +26,13 @@ commands:
   description: Mail Commands
   permission: core.mail.command.help
  secretcommand:
-  usage: Â§b/Â§aNope! This command is secret!
+  usage: §b/§aNope! This command is secret!
   permission: secret.command
   description: Shhhh!
  nick:
   permission: core.command.nick
   usage: /nick <player> <nickname> <mode>
-  description: Â§aSet a players Â§bnicknameÂ§a! Ported from EssentialsPEChat
+  description: §aSet a players §bnickname§a! Ported from EssentialsPEChat
 permissions:
  secret.command:
   description: Shhhh!
@@ -56,7 +56,7 @@ permissions:
   permission: core.mail.command.help
  core.command.nick:
   default: true
-  description: Â§aSet a players Â§bnicknameÂ§a! Ported from EssentialsPEChat
+  description: §aSet a players §bnickname§a! Ported from EssentialsPEChat
   permission: core.command.nick
  lbchatfilter:
   default: op
