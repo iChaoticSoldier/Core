@@ -116,7 +116,7 @@ class Main extends PluginBase implements Listener
 			$playerName = $args [0];
 			$p = $sender->getServer ()->getPlayerExact ( $playerName );
 			if ($p == null) {
-				$sender->sendMessage (TextFormat::RED . "player " . $playerName . " is not online!" );
+				$sender->sendMessage (TextFormat::RED . "player " . TextFormat::AQUA . $playerName . " is not online!" );
 				return true;
 			}
 			$nick = $args[1];
