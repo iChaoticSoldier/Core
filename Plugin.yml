@@ -4,6 +4,11 @@ version: 1.0.0
 api: 2.0.0
 
 commands:
+ lbchatfilter:
+  description: Manages ChatFilter
+  aliases: [cf, chatfilter]
+  usage: /lbchatfilter <command> <args>
+  permission: lbchatfilte
  core:
   usage: /core
   description: Info about Majorcraft's Core
@@ -53,3 +58,7 @@ permissions:
   default: true
   description: §aSet a players §bnickname§a! Ported from EssentialsPEChat
   permission: core.command.nick
+ lbchatfilter:
+  default: op
+  description: "Handle All ChatFilter Commands"
+
