@@ -14,7 +14,7 @@ But should work on:
   </tr>
   <tr>
     <td>Step 1:</td>
-    <td>Download a phar from <a href="http://github.com/MajorPlayz/MajorcraftCore/releases"><b>here</b></a>
+    <td>Download a phar from <a href="http://github.com/MajorPlayz/Core/releases"><b>here</b></a>
     </td>
   </tr>
   <tr>
