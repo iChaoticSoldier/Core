@@ -1,5 +1,5 @@
 # Core - An advanced core plugin for PocketMine-MP
-Designed and tested on<a href="http://github.com/iTXTech/Genisys">Genisys</a>
+Designed and tested on <a href="http://github.com/iTXTech/Genisys">Genisys</a>
 But should work on:
 - ClearSky
 - PocketMine
