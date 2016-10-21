@@ -1,5 +1,8 @@
-# MajorcraftCore
-A PocketMine-MP plugin for my Server. | Accept pull requests!
+# Core - An advanced core plugin for PocketMine-MP
+Designed and tested on <b><a href="http://github.com/iTXTech/Genisys">Genisys</a></b>
+But should work on:
+- ClearSky
+- PocketMine
 
 ###Read License for use in your code
 
