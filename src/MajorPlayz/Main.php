@@ -119,11 +119,11 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage (TextFormat::RED . "player " . $playerName . " is not online!" );
 				return true;
 			}
-			$nick = $args [1];
+			$nick = $args[1];
 			$this->plugin->nick_config ( $p->getName () . ".nick", $nick );
 			
 			$this->plugin->formatterPlayerDisplayName ( $p );
-			$sender->sendMessage (TextFormat::GREEN. $p->getName () . " set to " . $args [1] );
+			$sender->sendMessage (TextFormat::GREEN. $p->getName () . " set to " . $args[1] );
 			break;
 		}
 		}

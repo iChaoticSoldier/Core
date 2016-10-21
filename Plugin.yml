@@ -8,7 +8,7 @@ commands:
   description: Manages ChatFilter
   aliases: [cf, chatfilter]
   usage: /lbchatfilter <command> <args>
-  permission: lbchatfilte
+  permission: lbchatfilter
  core:
   usage: /core
   description: Info about Majorcraft's Core
