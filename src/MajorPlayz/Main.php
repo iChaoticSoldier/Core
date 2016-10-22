@@ -42,6 +42,24 @@ class Main extends PluginBase implements Listener
     public function onLoad()
     {
         $this->getLogger()->info(TextFormat::GREEN . "Majorcraft Core Loaded");
+	$this->badWords = [];
+	$this->words = file('words.txt',FILE_IGNORE_NEW_LINES);
+	foreach ($words as $word) {
+		$this->badWords[] = $word;
+	}
+    }
+	
+    public function filterBadwords($text, array $badwords, $replaceChar = '*')
+    {
+        return preg_replace_callback(
+            array_map(function ($w) {
+                return '/\b' . preg_quote($w, '/') . '\b/i';
+            }, $badwords),
+            function ($match) use ($replaceChar) {
+                return str_repeat($replaceChar, strlen($match[0]));
+            },
+            $text
+        );
     }
 
     public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
@@ -126,17 +144,12 @@ class Main extends PluginBase implements Listener
 			$sender->sendMessage (TextFormat::GREEN. $p->getName () . " set to " . $args[1] );
 			break;
 		}
-		}
                 }
-                
             }
-           return false; //return onCommand() function
 	    
 	   public function onPlayerChat(PlayerChatEvent $event) {
-        	if ($event === preg_match("words.txt")) {
-            	$event->setCancelled(true);
-           	$event->getPlayer()->sendMessage(TextFormat::RED . "I'm sorry, I can't let you say that.");
-        }
+           	//$event->getPlayer()->sendMessage(TextFormat::RED . "I'm sorry, I can't let you say that.");
+		$event->setMessage($this->filterbadwords($m, $this->badWords));
+	   }
     }
-        }
-    }
+}
