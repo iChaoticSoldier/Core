@@ -7,7 +7,7 @@ file_get_contents("http://x.com/file.txt");
 namespace majorplayz;
 
 /* Majorcraft Core Plugin
-   Written By MajorPlayz.. XD */
+   Written By MajorPlayz and Muqsit! XD */
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 use pocketmine\event\Listener;
