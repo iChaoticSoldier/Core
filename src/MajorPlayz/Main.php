@@ -42,8 +42,12 @@ class Main extends PluginBase implements Listener
     public function onLoad()
     {
         $this->getLogger()->info(TextFormat::GREEN . "Majorcraft Core Loaded");
+	if (!file_exists($this->getDataFolder() . "chat.yml")) {
+		@mkdir($this->getDataFolder());
+		file_put_contents($this->getDataFolder()."chat.yml", $this->getResource("chat.yml"));
+	}
 	$this->badWords = [];
-	$this->words = file('words.txt',FILE_IGNORE_NEW_LINES);
+	$words = (new Config($this->getDataFolder()."chat.yml", Config::YAML))->getAll();
 	foreach ($words as $word) {
 		$this->badWords[] = $word;
 	}
