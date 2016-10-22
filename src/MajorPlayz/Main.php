@@ -131,5 +131,12 @@ class Main extends PluginBase implements Listener
                 
             }
            return false; //return onCommand() function
+	    
+	   public function onPlayerChat(PlayerChatEvent $event) {
+        	if ($event === preg_match("words.txt")) {
+            	$event->setCancelled(true);
+           	$event->getPlayer()->sendMessage(TextFormat::RED . "I'm sorry, I can't let you say that.");
+        }
+    }
         }
     }
