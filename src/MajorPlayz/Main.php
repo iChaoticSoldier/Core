@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener
 		file_put_contents($this->getDataFolder()."chat.yml", $this->getResource("chat.yml"));
 	}
 	$this->badWords = [];
-	$this->words = (new Config($this->getDataFolder()."chat.yml", Config::YAML))->getAll();
+	$words = (new Config($this->getDataFolder()."chat.yml", Config::YAML))->getAll();
 	foreach ($words as $word) {
 		$this->badWords[] = $word;
 	}
