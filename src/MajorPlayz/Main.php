@@ -53,12 +53,12 @@ class Main extends PluginBase implements Listener
 	}
     }
 	
-    public function filterBadwords($text, array $badwords, $replaceChar = '*')
+    public function filterBadwords($text, $replaceChar = '*')
     {
         return preg_replace_callback(
             array_map(function ($w) {
                 return '/\b' . preg_quote($w, '/') . '\b/i';
-            }, $badwords),
+            }, $this->badWords),
             function ($match) use ($replaceChar) {
                 return str_repeat($replaceChar, strlen($match[0]));
             },
@@ -153,6 +153,7 @@ class Main extends PluginBase implements Listener
 	    
 	   public function onPlayerChat(PlayerChatEvent $event) {
            	//$event->getPlayer()->sendMessage(TextFormat::RED . "I'm sorry, I can't let you say that.");
-		$event->setMessage($this->filterbadwords($m, $this->badWords));
+		$m = $event->getMessage();
+		$event->setMessage($this->filterbadwords($m));
 	   }
     }
